@@ -8,9 +8,8 @@
 } 
 @mixin separator($color) {
     width: 20%;
-    background-color: $color;
     margin: auto;
-    border-top: 1px solid;
+    border-top: 1px solid $color;
     margin-bottom: 5%;
 }
 @mixin palette-item($color) {
@@ -153,5 +152,20 @@ $green: #27AD60!important;
 	    .col-md-2:last-child {
 		@include palette-item(#DC403B);
 	    }
+	}
+}
+#about-us {
+	box-shadow: 0px -3px 16px #6b7279;
+	background-color: #2e3c50;
+	h1 {
+		margin-top: 10%;
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white);
+	}
+	p {
+		color: white;
+		font-weight: 300;
 	}
 }
