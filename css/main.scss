@@ -18,6 +18,16 @@
     margin-bottom: 1%;
     font-weight: 400;
 }
+@mixin progressbar {
+	height: 10px;
+    border-radius: 0px;
+    border: 2px solid #DCD5D5;
+    background-color: #DCD5D5;
+}
+@mixin percent-bar($percent) {
+	width: $percent;
+	background-color: #E67E22;
+}
 // variables 
 $green: #27AD60!important;
 
@@ -167,5 +177,24 @@ $green: #27AD60!important;
 	p {
 		color: white;
 		font-weight: 300;
+	}
+	.progress {
+		
+		@include progressbar;
+		.progress-bar:first-child {
+			@include percent-bar(95%)
+		}
+		.progress-bar:nth-child(2) {
+			@include percent-bar(95%)
+		}
+		.progress-bar:nth-child(3) {
+			@include percent-bar(95%)
+		}
+		.progress-bar:nth-child(4) {
+			@include percent-bar(95%)
+		}
+		.progress-bar:last-child {
+			@include percent-bar(95%)
+		}
 	}
 }

@@ -186,5 +186,25 @@
   #about-us p {
     color: white;
     font-weight: 300; }
+  #about-us .progress {
+    height: 10px;
+    border-radius: 0px;
+    border: 2px solid #DCD5D5;
+    background-color: #DCD5D5; }
+    #about-us .progress .progress-bar:first-child {
+      width: 95%;
+      background-color: #E67E22; }
+    #about-us .progress .progress-bar:nth-child(2) {
+      width: 95%;
+      background-color: #E67E22; }
+    #about-us .progress .progress-bar:nth-child(3) {
+      width: 95%;
+      background-color: #E67E22; }
+    #about-us .progress .progress-bar:nth-child(4) {
+      width: 95%;
+      background-color: #E67E22; }
+    #about-us .progress .progress-bar:last-child {
+      width: 95%;
+      background-color: #E67E22; }
 
 /*# sourceMappingURL=main.css.map */
