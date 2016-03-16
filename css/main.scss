@@ -6,11 +6,11 @@
     text-align: center;
 	font-family: Roboto!important;
 } 
-@mixin separator($color) {
+@mixin separator($color,$bottom) {
     width: 20%;
     margin: auto;
     border-top: 1px solid $color;
-    margin-bottom: 5%;
+    margin-bottom: $bottom;
 }
 @mixin palette-item($color) {
 	padding: 0 5% 10%;
@@ -28,14 +28,35 @@
 	width: $percent;
 	background-color: #E67E22;
 }
+@mixin parrafo($color,$align) {
+	color: $color;
+	text-align: $align;
+	font-weight: 300;
+	font-family: Roboto!important;
+}
+@mixin general-btn($width,$fsize) {
+	background-color: #443E44;
+    color: white;
+    margin: auto;
+    width: $width;
+    text-align: center;
+    padding: 1% 0;
+    font-size: $fsize;
+    font-weight: 400;
+}
+@mixin seccion($padding,$color) {
+	padding: $padding 0;
+	background-color: $color;
+}
 // variables 
 $green: #27AD60!important;
+$azul: #2e3c50;
 
 
 
 
 .navbar {
-	background-color: $green;
+	@include seccion(0,$green);
 	margin: 0!important;
     padding: 1% 0;
     border-radius: 0px!important;
@@ -58,17 +79,12 @@ $green: #27AD60!important;
 	background-position: 0% 47%;
 	background-image: url("../img/carousel-bg.jpg");
     p {
-    	text-align: center;
-    	color: white;
-    	font-family: Roboto!important;
+    	@include parrafo(white,center);
+        line-height: 1.5;
+        font-size: 2.14em;
     }
     h1 {
     	@include titles(white);
-    }
-    p {
-        font-weight: 300;
-        line-height: 1.5;
-        font-size: 2.14em;
     }
 }
 #paleta-colores {
@@ -76,7 +92,7 @@ $green: #27AD60!important;
 		@include titles(black);
 	}
 	.separator {
-		@include separator(black);
+		@include separator(black,5%);
 	}
 	.first-row {
 		.col-md-2:first-child {
@@ -166,17 +182,27 @@ $green: #27AD60!important;
 }
 #about-us {
 	box-shadow: 0px -3px 16px #6b7279;
-	background-color: #2e3c50;
+	@include seccion (10%,$azul);
 	h1 {
-		margin-top: 10%;
 		@include titles(white);
 	}
 	.separator {
-		@include separator(white);
+		@include separator(white,1%);
 	}
-	p {
-		color: white;
-		font-weight: 300;
+	p:first-child,
+	p:nth-child(2) {
+		@include parrafo(white,left);
+	}
+	p:nth-child(2){
+		margin-bottom: 12%;
+	}
+	p:nth-child(4),
+	p:nth-child(6),
+	p:nth-child(8),
+	p:nth-child(10),
+	p:last-child {
+		@include parrafo(white,left);
+		margin-top: -2%;
 	}
 	.progress {
 		
@@ -185,16 +211,78 @@ $green: #27AD60!important;
 			@include percent-bar(95%)
 		}
 		.progress-bar:nth-child(2) {
-			@include percent-bar(95%)
+			@include percent-bar(90%)
 		}
 		.progress-bar:nth-child(3) {
-			@include percent-bar(95%)
+			@include percent-bar(65%)
 		}
 		.progress-bar:nth-child(4) {
-			@include percent-bar(95%)
+			@include percent-bar(70%)
 		}
 		.progress-bar:last-child {
-			@include percent-bar(95%)
+			@include percent-bar(85%)
+		} 
+	}
+	.img-responsive {
+		img {
+			width: 100%;
 		}
+	}
+}
+#do {
+	@include seccion(10%,$green);
+	h1 {
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white,1%);
+	}
+	p {
+		@include parrafo(white,center);
+	}
+	.col-md-4 {
+		.do-item {
+			margin: 15% 0 0;
+			padding: 5% 0 0;
+			text-align: center;
+			& > p {
+				font-size: 2.4em;
+                margin-top: 5%;
+                @include parrafo(white,center);	
+			}
+			.parrafo-do {
+			    width: 95%;
+			    padding: 7%;
+			    margin: auto;
+			    p {
+			    	font-size: 1.18em;
+			    	@include parrafo(#BFC1C0, center);
+			    }			
+			}
+			.bg-degrad {
+				width: 45%;
+			    background-size: 100%;
+			    background-image: url("../img/icon-bg.png");
+			    background-color: #2C3E50;
+			    margin: auto;
+			    padding: 7% 0;
+			}
+		}
+	}
+	.general-btn {
+		margin-top: 10%;
+		@include general-btn(16%,1.5em);
+	}
+}
+#awesome-team {
+	@include seccion(10%,$green);
+	h1 {
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white,1%);
+	}
+	p {
+		@include parrafo(white,center);
 	}
 }

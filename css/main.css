@@ -1,4 +1,5 @@
 .navbar {
+  padding: 0 0;
   background-color: #27AD60 !important;
   margin: 0 !important;
   padding: 1% 0;
@@ -17,19 +18,18 @@
   background-position: 0% 47%;
   background-image: url("../img/carousel-bg.jpg"); }
   #hero-image p {
-    text-align: center;
     color: white;
-    font-family: Roboto !important; }
+    text-align: center;
+    font-weight: 300;
+    font-family: Roboto !important;
+    line-height: 1.5;
+    font-size: 2.14em; }
   #hero-image h1 {
     color: white;
     font-size: 5em;
     font-weight: 400;
     text-align: center;
     font-family: Roboto !important; }
-  #hero-image p {
-    font-weight: 300;
-    line-height: 1.5;
-    font-size: 2.14em; }
 
 #paleta-colores h1 {
   color: black;
@@ -170,9 +170,9 @@
 
 #about-us {
   box-shadow: 0px -3px 16px #6b7279;
+  padding: 10% 0;
   background-color: #2e3c50; }
   #about-us h1 {
-    margin-top: 10%;
     color: white;
     font-size: 5em;
     font-weight: 400;
@@ -182,10 +182,25 @@
     width: 20%;
     margin: auto;
     border-top: 1px solid white;
-    margin-bottom: 5%; }
-  #about-us p {
+    margin-bottom: 1%; }
+  #about-us p:first-child,
+  #about-us p:nth-child(2) {
     color: white;
-    font-weight: 300; }
+    text-align: left;
+    font-weight: 300;
+    font-family: Roboto !important; }
+  #about-us p:nth-child(2) {
+    margin-bottom: 12%; }
+  #about-us p:nth-child(4),
+  #about-us p:nth-child(6),
+  #about-us p:nth-child(8),
+  #about-us p:nth-child(10),
+  #about-us p:last-child {
+    color: white;
+    text-align: left;
+    font-weight: 300;
+    font-family: Roboto !important;
+    margin-top: -2%; }
   #about-us .progress {
     height: 10px;
     border-radius: 0px;
@@ -195,16 +210,96 @@
       width: 95%;
       background-color: #E67E22; }
     #about-us .progress .progress-bar:nth-child(2) {
-      width: 95%;
+      width: 90%;
       background-color: #E67E22; }
     #about-us .progress .progress-bar:nth-child(3) {
-      width: 95%;
+      width: 65%;
       background-color: #E67E22; }
     #about-us .progress .progress-bar:nth-child(4) {
-      width: 95%;
+      width: 70%;
       background-color: #E67E22; }
     #about-us .progress .progress-bar:last-child {
-      width: 95%;
+      width: 85%;
       background-color: #E67E22; }
+  #about-us .img-responsive img {
+    width: 100%; }
+
+#do {
+  padding: 10% 0;
+  background-color: #27AD60 !important; }
+  #do h1 {
+    color: white;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    font-family: Roboto !important; }
+  #do .separator {
+    width: 20%;
+    margin: auto;
+    border-top: 1px solid white;
+    margin-bottom: 1%; }
+  #do p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-family: Roboto !important; }
+  #do .col-md-4 .do-item {
+    margin: 15% 0 0;
+    padding: 5% 0 0;
+    text-align: center; }
+    #do .col-md-4 .do-item > p {
+      font-size: 2.4em;
+      margin-top: 5%;
+      color: white;
+      text-align: center;
+      font-weight: 300;
+      font-family: Roboto !important; }
+    #do .col-md-4 .do-item .parrafo-do {
+      width: 95%;
+      padding: 7%;
+      margin: auto; }
+      #do .col-md-4 .do-item .parrafo-do p {
+        font-size: 1.18em;
+        color: #BFC1C0;
+        text-align: center;
+        font-weight: 300;
+        font-family: Roboto !important; }
+    #do .col-md-4 .do-item .bg-degrad {
+      width: 45%;
+      background-size: 100%;
+      background-image: url("../img/icon-bg.png");
+      background-color: #2C3E50;
+      margin: auto;
+      padding: 7% 0; }
+  #do .general-btn {
+    margin-top: 10%;
+    background-color: #443E44;
+    color: white;
+    margin: auto;
+    width: 16%;
+    text-align: center;
+    padding: 1% 0;
+    font-size: 1.5em;
+    font-weight: 400; }
+
+#awesome-team {
+  padding: 10% 0;
+  background-color: #27AD60 !important; }
+  #awesome-team h1 {
+    color: white;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    font-family: Roboto !important; }
+  #awesome-team .separator {
+    width: 20%;
+    margin: auto;
+    border-top: 1px solid white;
+    margin-bottom: 1%; }
+  #awesome-team p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-family: Roboto !important; }
 
 /*# sourceMappingURL=main.css.map */
