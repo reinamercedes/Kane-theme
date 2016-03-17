@@ -35,7 +35,7 @@
 	font-family: Roboto!important;
 }
 @mixin general-btn($width,$fsize) {
-	background-color: #443E44;
+	background-color: $negro;
     color: white;
     margin: auto;
     width: $width;
@@ -48,10 +48,40 @@
 	padding: $padding 0;
 	background-color: $color;
 }
+@mixin range-price($bg-color) {
+	background-color: $bg-color;
+    font-size: 2em;
+    color: $gris;
+    font-weight: 300;
+    padding: 7% 0;
+}
+@mixin cost {
+	background-color: $green;
+	font-size: 4em;
+	color: white;
+	font-weight: 400;
+	padding: 5% 0;
+}
+@mixin detail-price($color,$bg-color) {
+	padding: 3% 0;
+	color: $color;
+	font-weight: 300;
+	background-color: $bg-color;
+}
+// placeholders
+%span-h6-cost {
+	font-size: 0.2em;
+    font-weight: 300;
+}
+%mb-5 {
+	margin-bottom: 5%;
+}
 // variables 
 $green: #27AD60!important;
 $azul: #2e3c50;
-
+$negro: #443E44;
+$gris: #C1C1C1;
+$naranja: #8F5F38;
 
 
 
@@ -256,7 +286,7 @@ $azul: #2e3c50;
 			    margin: auto;
 			    p {
 			    	font-size: 1.18em;
-			    	@include parrafo(#BFC1C0, center);
+			    	@include parrafo($gris, center);
 			    }			
 			}
 			.bg-degrad {
@@ -275,7 +305,7 @@ $azul: #2e3c50;
 	}
 }
 #awesome-team {
-	@include seccion(10%,$green);
+	@include seccion(12%,$green);
 	h1 {
 		@include titles(white);
 	}
@@ -284,5 +314,114 @@ $azul: #2e3c50;
 	}
 	p {
 		@include parrafo(white,center);
+	}
+	.person-team {
+		margin-top: 30%;
+		text-align: center;
+		color: white;		
+		.avatar-team {
+			margin: 10% 24%;
+		    padding: 27%;
+		    background-position: 72%;
+		    background-size: 130% 130%;
+		    background-image: url("../img/team/1.jpg");
+		}
+		h4 {
+			@include parrafo(white,center);
+		}
+		h6 {
+			font-weight: 600!important;
+			@include parrafo($negro,center);
+		}
+		.separator {
+			@include separator(#9E968F,5%);
+			border-top-style: dashed;
+			width: 100%!important;
+		}
+		p {
+			@include parrafo($gris,center);
+		}
+		i {
+			color: $gris;
+			font-size: 1.5em;
+            margin: 4% 2% 0;
+		}
+	}
+}
+#price {
+	@include seccion(10%,$azul);
+	h1 {
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white,1%);
+	}
+	p {
+		@include parrafo(white,center);
+	}
+	.col-md-3 {
+		.price-box {
+			border: 1px solid $green;			
+			text-align: center;
+			margin-top: 25%;
+			.range-orange {
+				@include range-price($naranja);
+			}
+			.range {
+				@include range-price(transparent);				
+			}
+			.cost {
+				@include cost;
+				span,
+				h6 {
+					@extend %span-h6-cost;
+				}
+			}
+			.first-detail {
+				@include detail-price($gris,$naranja);
+			}
+			.detail-trans {
+				@include detail-price($gris,transparent);
+			}
+			.detail-bg {
+				@include detail-price($azul,white);
+			}
+			.general-btn {
+				@include general-btn(37%,1.5em);
+				padding: 3% 0;
+				margin-top: 15%;
+				margin-bottom: 15%;
+			}
+		}
+	}
+}
+#our-clients {
+	@include seccion(10%,$azul);
+	h1 {
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white,1%);
+	}
+	.first-row {
+		& > p {
+			@extend %mb-5;
+		}
+	}
+	p {
+		@include parrafo(white,center);
+	}
+	.client-say {
+		font-size: 1.4em;
+		p {
+			font-style: oblique;
+			@include parrafo($gris,center);
+	    }
+	    h5 {
+	    	@extend %mb-5;
+	    	font-size: 1em;
+	    	font-weight: 500!important;
+	    	@include parrafo($naranja,center);
+	    }
 	}
 }
