@@ -451,4 +451,66 @@
       font-weight: 300;
       font-family: Roboto !important; }
 
+#intouch {
+  padding: 10% 0;
+  background-color: #2e3c50; }
+  #intouch h1 {
+    color: white;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    font-family: Roboto !important; }
+  #intouch .separator {
+    width: 20%;
+    margin: auto;
+    border-top: 1px solid white;
+    margin-bottom: 1%; }
+  #intouch p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-family: Roboto !important; }
+  #intouch .general-btn {
+    background-color: #443E44;
+    color: white;
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    padding: 1% 0;
+    font-size: 1.5em;
+    font-weight: 400; }
+  #intouch input,
+  #intouch textarea {
+    width: 100%;
+    margin: 1% 0;
+    padding: 1.5%; }
+  #intouch input:first-child {
+    margin-top: 5%; }
+  #intouch textarea {
+    margin-bottom: 5%;
+    padding-bottom: 20%; }
+  #intouch .required {
+    text-align: left;
+    padding: 0 18%; }
+
+#before-social {
+  padding: 5%;
+  background-position: 100% 38%;
+  background-image: url("../img/img-divider-img.jpg"); }
+
+#social {
+  padding: 0 0;
+  background-color: none;
+  padding-top: 7%;
+  padding-bottom: 16%;
+  background-repeat: no-repeat;
+  background-position: 100% 7%;
+  background-image: url("../img/img-divider-img.jpg"); }
+  #social .row {
+    text-align: center; }
+    #social .row i {
+      font-size: 10em;
+      color: white;
+      margin: 0 1%; }
+
 /*# sourceMappingURL=main.css.map */

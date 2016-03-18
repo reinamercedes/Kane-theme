@@ -425,3 +425,56 @@ $naranja: #8F5F38;
 	    }
 	}
 }
+#intouch {
+	@include seccion(10%,$azul);
+	h1 {
+		@include titles(white);
+	}
+	.separator {
+		@include separator(white,1%);
+	}
+	p {
+		@include parrafo(white,center);
+	}
+	.general-btn {
+		@include general-btn(10%,1.5em);
+	}
+	input,
+	textarea {
+		width: 100%;
+	    margin: 1% 0;
+	    padding: 1.5%;
+	}
+	input:first-child {
+		margin-top: 5%;
+	}
+	textarea {
+		margin-bottom: 5%;
+		padding-bottom: 20%;
+	}
+	.required {
+		text-align: left;
+        padding: 0 18%;
+	}
+}
+#before-social {
+	padding: 5%;
+	background-position: 100% 38%;
+	background-image: url("../img/img-divider-img.jpg");
+}
+#social {
+	@include seccion(0,none);
+	padding-top: 7%;
+    padding-bottom: 16%;
+	background-repeat: no-repeat;
+    background-position: 100% 7%;
+    background-image: url("../img/img-divider-img.jpg");
+	.row {
+		text-align: center;
+		i {
+		font-size: 10em;
+	    color: white;
+	    margin: 0 1%;
+	    }
+	}
+}
